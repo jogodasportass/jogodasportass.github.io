@@ -4,161 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escolha uma Porta</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <style>
+        /* Estilos de fundo e design do site */
         body {
-            font-family: 'Roboto', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: url(giffundo.gif);
-            background-size: cover;
-            flex-direction: column;
-            color: white;
-        }
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://wallpapers.com/images/high/love-pictures-9ireei9tfik8jln0.webp'); /* Substitua pelo caminho da imagem de amor */
+    background-size: cover;
+    flex-direction: column;
+    margin: 0;
+}
         .container {
-            background: #ff4d4d;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+            background: rgba(255, 77, 77, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             color: white;
-        }
-        input {
-            width: 80%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            text-align: center;
-        }
-        button {
-            width: 80%;
-            padding: 10px;
-            background: #d40000;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .hidden {
-            display: none;
-        }
-        .doors {
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .door {
-            width: 100px;
-            height: 150px;
-            background: #a00000;
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
             position: relative;
-            transition: transform 0.5s ease-in-out;
+            animation: fadeIn 1s ease-in-out;
         }
-        .door:hover {
-            transform: rotateY(20deg);
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
-        .prize {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 20px;
-            animation: pop 0.5s ease-in-out;
-        }
-        @keyframes pop {
-            0% { transform: scale(0); }
-            100% { transform: scale(1); }
-        }
-        .social-links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 20px;
-            align-items: center;
-        }
-        .social-links a {
-            text-decoration: none;
-            font-size: 20px;
-            background: white;
-            padding: 10px 20px;
-            border-radius: 10px;
-            color: #d40000;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .music-control {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: white;
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        .music-indicator {
-            position: fixed;
-            bottom: 100px;
-            right: 20px;
-            color: white;
-            background-color: #d40000;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-weight: bold;
-        }
-        .confetti {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://cdn.pixabay.com/photo/2017/08/30/03/05/confetti-2693519_960_720.png') repeat;
-            animation: confettiAnimation 2s infinite;
-        }
-        @keyframes confettiAnimation {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .animated-text {
-            animation: bounce 1s ease-in-out infinite alternate;
+
+        h2 {
+            font-family: 'Lobster', cursive;
+            font-size: 36px;
+            animation: bounce 1.5s infinite;
         }
 
         @keyframes bounce {
             0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+            50% { transform: translateY(-10px); }
             100% { transform: translateY(0); }
         }
 
-        .door-text {
-            font-family: 'Pacifico', cursive;
+        input {
+            width: 80%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        button {
+            width: 80%;
+            padding: 12px;
+            background: #d40000;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #b30000;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .doors {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .door {
+            width: 120px;
+            height: 180px;
+            background: linear-gradient(135deg, #ff4d4d, #ff0000);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.5s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            animation: zoomIn 1s ease-in-out;
+        }
+
+        @keyframes zoomIn {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .door:hover {
+            transform: scale(1.1);
+        }
+
+        .prize {
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 20px;
+            font-family: 'Roboto', sans-serif; /* Fonte modificada para os prêmios */
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        .social-links a {
+            text-decoration: none;
             font-size: 22px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            animation: glow 1.5s ease-in-out infinite alternate;
+            background: white;
+            padding: 12px 25px;
+            border-radius: 12px;
+            color: #d40000;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.3s ease;
         }
 
-        @keyframes glow {
-            0% { text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.8); }
-            100% { text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8); }
+        .social-links a:hover {
+            transform: translateY(-5px);
         }
 
-        .prize-text {
-            font-family: 'Pacifico', cursive;
-            font-size: 30px;
-            color: #ffcc00;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            animation: pulse 1s ease-in-out infinite;
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #fff;
+            padding: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 28px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .music-control:hover {
+            transform: scale(1.1);
+        }
+
+        .music-indicator {
+            margin-left: 15px;
+            animation: pulse 1.5s infinite;
+            color: #ff4d4d;
         }
 
         @keyframes pulse {
@@ -166,41 +180,64 @@
             50% { transform: scale(1.2); }
             100% { transform: scale(1); }
         }
+
+        .back-button {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: #d40000;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 20px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #b30000;
+        }
     </style>
 </head>
 <body>
-    <audio id="backgroundMusic" loop>
+    <!-- Áudio de fundo -->
+    <audio id="backgroundMusic" loop autoplay>
         <source src="musica.mp3" type="audio/mpeg">
     </audio>
-    <div class="music-control" onclick="toggleMusic()">🎵</div>
-    <div id="musicIndicator" class="music-indicator hidden">🎶 Música Ligada</div>
-    
+
+    <div class="music-control" onclick="toggleMusic()">
+        🎵
+        <span id="musicIndicator" class="music-indicator">🔊</span>
+    </div>
+
     <div class="container" id="infoContainer">
-        <h2 class="animated-text">Informe seu nome</h2>
+        <h2>Informe seu nome</h2>
         <input type="text" id="nome" placeholder="Digite seu nome">
         <button onclick="irParaEscolha()">Continuar</button>
     </div>
 
     <div class="container hidden" id="choiceContainer">
-        <h2 class="animated-text">Escolha uma porta e descubra seu prêmio especial</h2>
+        <button class="back-button" onclick="voltarAoInicio()">←</button>
+        <h2>Escolha uma porta e descubra seu prêmio especial</h2>
         <div class="doors">
-            <div class="door" onclick="mostrarMensagem(1)">
-                <span class="door-text">Porta 1</span>
-            </div>
-            <div class="door" onclick="mostrarMensagem(2)">
-                <span class="door-text">Porta 2</span>
-            </div>
-            <div class="door" onclick="mostrarMensagem(3)">
-                <span class="door-text">Porta 3</span>
-            </div>
+            <div class="door" onclick="mostrarMensagem(1)">Porta 1</div>
+            <div class="door" onclick="mostrarMensagem(2)">Porta 2</div>
+            <div class="door" onclick="mostrarMensagem(3)">Porta 3</div>
         </div>
         <p id="mensagem"></p>
     </div>
 
     <div class="container hidden" id="prizeContainer">
-        <h2 class="animated-text">Parabéns!</h2>
-        <p id="prizeMessage" class="prize-text"></p>
-        <div class="confetti"></div>
+        <button class="back-button" onclick="voltarAoInicio()">←</button>
+        <h2>Parabéns!</h2>
+        <p id="prizeMessage" class="prize"></p>
         <p>Acesse uma das opções caso queira continuar a conversa</p>
         <div class="social-links">
             <a href="https://www.instagram.com/dannl.ig/" target="_blank">
@@ -210,14 +247,17 @@
                 <img src="https://img.icons8.com/ios-filled/50/000000/whatsapp.png" width="25"> WhatsApp
             </a>
         </div>
-        <button onclick="voltarAoInicio()">Voltar ao Início</button>
     </div>
+
+    <!-- Confetti.js -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
     <script>
         let nome;
         let musicPlaying = false;
         let audio = document.getElementById("backgroundMusic");
-
+        
+        // Função para alternar a música
         function toggleMusic() {
             if (musicPlaying) {
                 audio.pause();
@@ -229,42 +269,45 @@
             musicPlaying = !musicPlaying;
         }
 
+        // Função para ir para a escolha de portas
         function irParaEscolha() {
             nome = document.getElementById("nome").value;
-            if (nome) {
-                document.getElementById("infoContainer").classList.add("hidden");
-                document.getElementById("choiceContainer").classList.remove("hidden");
+            
+            if (!nome) {
+                alert("Por favor, digite seu nome!");
+                return;
             }
+            
+            document.getElementById("infoContainer").classList.add("hidden");
+            document.getElementById("choiceContainer").classList.remove("hidden");
         }
 
+        // Função para mostrar a mensagem ao escolher a porta
         function mostrarMensagem(porta) {
-            const mensagens = [
-                `💋 ${nome}, você ganhou um vale BEIJO DE CINEMA! (Retire no local que iremos combinar)`,
-                `🔥 ${nome}, você ganhou um vale SEXO SELVAGEM! (Esse é o prêmio MAIOR, iremos combinar o local de retirada)`,
-                `🎁 ${nome}, você ganhou um DATE comigo! (O local será escolhido por mim)`
-            ];
-            document.getElementById("mensagem").textContent = mensagens[porta - 1];
-            document.getElementById("mensagem").classList.remove("hidden");
-            confetti(); // Animação de confetes
-            setTimeout(() => {
-                mostrarPremio(porta);
-            }, 1000);
-        }
-
-        function mostrarPremio(porta) {
             const premios = [
-                "Você encontrou um prêmio especial! 🎉",
-                "Você ganhou um prêmio incrível! 🏆",
-                "Parabéns, você é o vencedor de um super prêmio! 🏅"
+                "💋 {nome}, você ganhou um vale BEIJO DE CINEMA! (Retire no local que iremos combinar)",
+                "🔥 {nome}, você ganhou um vale SEXO SELVAGEM! (Esse é o prêmio MAIOR, iremos combinar o local de retirada)",
+                "🎁 {nome}, você ganhou um DATE comigo! (O local será escolhido por mim)"
             ];
-            document.getElementById("prizeMessage").textContent = premios[porta - 1];
+
+            let premio = premios[porta - 1].replace("{nome}", nome);
             document.getElementById("choiceContainer").classList.add("hidden");
             document.getElementById("prizeContainer").classList.remove("hidden");
+            document.getElementById("prizeMessage").innerHTML = premio;
+
+            // Animação de confetes de corações
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { x: 0.5, y: 0.5 },
+                shapes: ['heart'],
+                colors: ['#ff0000', '#ff6666', '#ffcccc']
+            });
         }
 
+        // Função para voltar ao início
         function voltarAoInicio() {
             document.getElementById("prizeContainer").classList.add("hidden");
-            document.getElementById("choiceContainer").classList.add("hidden");
             document.getElementById("infoContainer").classList.remove("hidden");
             document.getElementById("nome").value = "";
         }
